@@ -135,7 +135,7 @@ export function Footer() {
               <a href="#terms" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Terms of Service
               </a>
-              <a href="#safety" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
+              <a href="#safety-blog" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Safety Guidelines
               </a>
             </div>

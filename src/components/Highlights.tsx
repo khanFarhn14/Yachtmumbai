@@ -122,6 +122,12 @@ export function Highlights() {
                     </p>
                     
                     <motion.button
+                      onClick={() => {
+                        const phoneNumber = '917666689265';
+                        const message = encodeURIComponent(`Hi! I'd like to enquire about ${trip.title}.\nPlease share availability, pricing, and package details.`);
+                        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+                        window.open(whatsappURL, '_blank');
+                      }}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       transition={{ duration: 0.2 }}
@@ -135,7 +141,8 @@ export function Highlights() {
                         fontWeight: 600,
                         fontSize: '14px',
                         letterSpacing: '0.02em',
-                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                        cursor: 'pointer'
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';

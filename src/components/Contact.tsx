@@ -174,7 +174,7 @@ export function Contact() {
                     name="guests"
                     value={formData.guests}
                     onChange={handleChange}
-                    className="w-full h-11 px-3 rounded-lg transition-all duration-150 focus:outline-none focus:ring-2"
+                    className="w-full h-11 pl-3 pr-12 rounded-lg transition-all duration-150 focus:outline-none focus:ring-2"
                     style={{
                       border: '1px solid var(--neutral-300)',
                       backgroundColor: 'var(--neutral-0)',

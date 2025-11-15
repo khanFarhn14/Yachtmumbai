@@ -1,45 +1,6 @@
-import { Shield, AlertTriangle, Heart, Users, Anchor, LifeBuoy, CheckCircle, Info, Book, ArrowLeft, Award, Briefcase } from "lucide-react";
+import { Shield, AlertTriangle, Heart, Users, Anchor, LifeBuoy, CheckCircle, Info, Book, ArrowLeft, Award, Briefcase, Ship, Wind, Sun, Utensils, PackageCheck, AlertCircle, Phone, Clock, Activity } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
-const safetyFeatures = [
-  {
-    id: 1,
-    icon: Users,
-    title: "Experienced Staff",
-    description: "Our crew members are professionally trained in swimming and water safety, ensuring your journey is secure and enjoyable."
-  },
-  {
-    id: 2,
-    icon: LifeBuoy,
-    title: "Life Jackets for All",
-    description: "Coast Guard approved life jackets provided for every passenger, including specially sized jackets for children."
-  },
-  {
-    id: 3,
-    icon: LifeBuoy,
-    title: "Fiber-Reinforced Safety",
-    description: "Premium fiber-reinforced life buoy rings strategically positioned throughout the vessel for emergency response."
-  },
-  {
-    id: 4,
-    icon: Anchor,
-    title: "Professional Anchoring",
-    description: "State-of-the-art ship anchoring systems operated by certified professionals for secure positioning."
-  },
-  {
-    id: 5,
-    icon: Briefcase,
-    title: "High-End Meeting Facilities",
-    description: "Sophisticated onboard meeting facilities equipped with modern amenities for corporate events and business gatherings."
-  },
-  {
-    id: 6,
-    icon: Shield,
-    title: "Certified & Compliant",
-    description: "All vessels are certified by Indian Coast Guard and Maritime Safety Authority with regular inspections."
-  }
-];
 
 const experienceStats = [
   {
@@ -51,7 +12,7 @@ const experienceStats = [
   {
     id: 2,
     number: "2,000+",
-    label: "Satisfied Customers",
+    label: "Happy Passengers",
     icon: Heart
   },
   {
@@ -62,261 +23,211 @@ const experienceStats = [
   }
 ];
 
-const safetyArticles = [
+const safetyFeatures = [
   {
     id: 1,
-    title: "Essential Safety Equipment on Every Yacht",
-    category: "Equipment",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMHNhZmV0eSUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NjMwNjI5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    content: {
-      intro: "Safety is our top priority at Book Sailing Mumbai. Every vessel in our fleet is equipped with comprehensive safety equipment that meets and exceeds maritime safety standards.",
-      sections: [
-        {
-          heading: "Life-Saving Equipment",
-          points: [
-            "Coast Guard approved life jackets for every passenger, including specially sized jackets for children",
-            "Premium fiber-reinforced life buoy rings strategically positioned throughout the vessel",
-            "Emergency flares and signaling devices",
-            "First aid kits with essential medical supplies"
-          ]
-        },
-        {
-          heading: "Communication & Navigation",
-          points: [
-            "VHF radio for emergency communication",
-            "GPS navigation systems",
-            "Weather monitoring equipment",
-            "Emergency position-indicating radio beacon (EPIRB)"
-          ]
-        },
-        {
-          heading: "Fire Safety",
-          points: [
-            "Fire extinguishers in all key areas",
-            "Smoke and carbon monoxide detectors",
-            "Fire blankets in galley areas",
-            "Emergency evacuation procedures posted throughout"
-          ]
-        }
-      ]
-    }
+    icon: LifeBuoy,
+    title: "Life-Saving Equipment",
+    description: "Coast Guard approved life jackets for every passenger, including specially sized jackets for children. Premium fiber-reinforced life buoy rings strategically positioned throughout the vessel.",
+    image: "https://images.unsplash.com/photo-1758716147082-c2d332b1aed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWZlJTIwamFja2V0JTIwc2FmZXR5JTIwZXF1aXBtZW50fGVufDF8fHx8MTc2MzE4NjU3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
     id: 2,
-    title: "Pre-Departure Safety Briefing",
-    category: "Procedures",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGNyZXclMjBicmllZmluZ3xlbnwxfHx8fDE3NjMwNjI5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    content: {
-      intro: "Before every voyage, our professional crew conducts a comprehensive safety briefing to ensure all passengers are informed and prepared.",
-      sections: [
-        {
-          heading: "What We Cover",
-          points: [
-            "Location and proper use of life jackets",
-            "Emergency assembly points and evacuation procedures",
-            "Location of emergency exits and fire extinguishers",
-            "Communication protocols and emergency signals",
-            "Man overboard procedures"
-          ]
-        },
-        {
-          heading: "Passenger Responsibilities",
-          points: [
-            "Listen carefully to all safety instructions",
-            "Know where your life jacket is stored",
-            "Familiarize yourself with emergency exits",
-            "Keep walkways and exits clear",
-            "Report any safety concerns immediately to crew"
-          ]
-        },
-        {
-          heading: "Children's Safety",
-          points: [
-            "Children must wear life jackets at all times on deck",
-            "Adult supervision required for children under 12",
-            "Special safety zones designated for families",
-            "Child-friendly safety demonstrations provided"
-          ]
-        }
-      ]
-    }
+    icon: Users,
+    title: "Expert Crew",
+    description: "Our crew members are professionally trained in swimming, water safety, and emergency response. Every captain holds a valid license from the Directorate General of Shipping with years of experience.",
+    image: "https://images.unsplash.com/photo-1587728409203-97f284c580fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGNhcHRhaW4lMjBjcmV3fGVufDF8fHx8MTc2MzE4NjU3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
     id: 3,
-    title: "Weather Monitoring & Trip Cancellation Policy",
-    category: "Weather Safety",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1527482937786-6608399b5c7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWF0aGVyJTIwb2NlYW4lMjBzdG9ybXxlbnwxfHx8fDE3NjMwNjI5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    content: {
-      intro: "Weather conditions are constantly monitored to ensure safe sailing conditions. Your safety is more important than any schedule.",
-      sections: [
-        {
-          heading: "Our Weather Monitoring System",
-          points: [
-            "Real-time weather updates from Indian Meteorological Department",
-            "Professional marine weather forecasting services",
-            "Continuous monitoring of wind speed and wave conditions",
-            "24-hour advance weather assessment for all bookings"
-          ]
-        },
-        {
-          heading: "Trip Cancellation Criteria",
-          points: [
-            "Wind speeds exceeding 25 knots",
-            "Wave heights above 2 meters",
-            "Thunderstorm warnings or heavy rainfall",
-            "Poor visibility conditions",
-            "Any Coast Guard advisories against sailing"
-          ]
-        },
-        {
-          heading: "Cancellation Policy",
-          points: [
-            "Full refund for weather-related cancellations by our team",
-            "Option to reschedule at no additional cost",
-            "48-hour advance notice for weather concerns",
-            "No penalties for safety-related cancellations"
-          ]
-        }
-      ]
-    }
+    icon: Activity,
+    title: "Medical Preparedness",
+    description: "Comprehensive first aid kits with essential medical supplies on every vessel. At least one crew member is trained and certified in first aid and CPR on each trip.",
+    image: "https://images.unsplash.com/photo-1564144573017-8dc932e0039e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaXJzdCUyMGFpZCUyMGtpdCUyMGVtZXJnZW5jeXxlbnwxfHx8fDE3NjMxMTIzMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
     id: 4,
-    title: "Our Crew: Training & Certifications",
-    category: "Crew Excellence",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGNhcHRhaW4lMjBjcmV3fGVufDF8fHx8MTc2MzA2MjkzMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    content: {
-      intro: "Our crew members are the backbone of our safety commitment. Every team member undergoes rigorous training and maintains current certifications.",
-      sections: [
-        {
-          heading: "Captain Qualifications",
-          points: [
-            "Valid Captain's License from Directorate General of Shipping",
-            "Minimum 7 years of maritime experience",
-            "Advanced navigation and safety training",
-            "Regular skill refresher courses",
-            "First aid and CPR certified"
-          ]
-        },
-        {
-          heading: "Crew Training",
-          points: [
-            "Comprehensive water safety certification",
-            "Swimming proficiency requirements",
-            "Fire safety and emergency response training",
-            "Customer service and hospitality training",
-            "Annual safety drills and evaluations"
-          ]
-        },
-        {
-          heading: "Continuous Education",
-          points: [
-            "Monthly safety workshops",
-            "Quarterly emergency simulation drills",
-            "Updated maritime law and regulation training",
-            "Guest feedback incorporation into training programs"
-          ]
-        }
-      ]
-    }
+    icon: Wind,
+    title: "Weather Monitoring",
+    description: "Real-time weather updates from the Indian Meteorological Department. We never compromise on safety - if conditions aren't perfect, we reschedule at no cost to you.",
+    image: "https://images.unsplash.com/photo-1661696005376-337e401d8571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHNhaWxpbmclMjB3ZWF0aGVyfGVufDF8fHx8MTc2MzE4NjU3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
     id: 5,
-    title: "Vessel Maintenance & Inspection Standards",
-    category: "Vessel Safety",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMG1haW50ZW5hbmNlfGVufDF8fHx8MTc2MzA2MjkzMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    content: {
-      intro: "Regular maintenance and thorough inspections ensure that every vessel in our fleet operates at peak safety standards.",
-      sections: [
-        {
-          heading: "Daily Inspections",
-          points: [
-            "Pre-departure safety equipment check",
-            "Engine and mechanical systems inspection",
-            "Hull integrity assessment",
-            "Communication equipment testing",
-            "Fuel and fluid level verification"
-          ]
-        },
-        {
-          heading: "Regular Maintenance Schedule",
-          points: [
-            "Weekly comprehensive vessel inspection",
-            "Monthly engine servicing and maintenance",
-            "Quarterly hull cleaning and underwater inspection",
-            "Annual dry dock and major system overhaul",
-            "Immediate repair of any identified issues"
-          ]
-        },
-        {
-          heading: "Official Certifications",
-          points: [
-            "Indian Coast Guard annual vessel certification",
-            "Maritime Safety Authority compliance certificates",
-            "Environmental compliance documentation",
-            "Insurance coverage verification",
-            "All safety equipment certification up to date"
-          ]
-        }
-      ]
-    }
+    icon: Ship,
+    title: "Regular Maintenance",
+    description: "Every vessel undergoes daily pre-departure inspections and regular comprehensive maintenance. All vessels are certified by the Indian Coast Guard with current safety certificates.",
+    image: "https://images.unsplash.com/photo-1645932647969-6a92e3d6667f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib2F0JTIwbWFpbnRlbmFuY2UlMjBpbnNwZWN0aW9ufGVufDF8fHx8MTc2MzE4NjU3OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
   },
   {
     id: 6,
-    title: "Emergency Procedures & Protocols",
-    category: "Emergency Response",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1504805572947-34fad45aed93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbWVyZ2VuY3klMjByZXNwb25zZXxlbnwxfHx8fDE3NjMwNjI5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    content: {
-      intro: "While emergencies are rare, we are thoroughly prepared with detailed protocols and regular training to handle any situation.",
-      sections: [
-        {
-          heading: "Man Overboard Procedure",
-          points: [
-            "Immediate crew alert and position marking",
-            "Deploy life ring to person in water",
-            "Maintain visual contact at all times",
-            "Execute controlled turn to return to position",
-            "Coordinate with Coast Guard if needed"
-          ]
-        },
-        {
-          heading: "Medical Emergencies",
-          points: [
-            "Crew member trained in first aid always onboard",
-            "Comprehensive first aid kit available",
-            "Direct communication line to shore-based medical support",
-            "Evacuation procedures to nearest medical facility",
-            "Emergency helicopter evacuation coordination if required"
-          ]
-        },
-        {
-          heading: "Fire Emergency",
-          points: [
-            "Immediate alert to all passengers and crew",
-            "Activation of fire suppression systems",
-            "Controlled evacuation to assembly points",
-            "Coast Guard notification",
-            "Life raft deployment if necessary"
-          ]
-        },
-        {
-          heading: "24/7 Support",
-          points: [
-            "Shore-based emergency operations center",
-            "Direct line to Coast Guard operations",
-            "GPS tracking of all vessels in real-time",
-            "Backup communication systems",
-            "Family notification protocols in place"
-          ]
-        }
-      ]
-    }
+    icon: Book,
+    title: "Safety Briefing",
+    description: "Before every departure, our crew conducts a thorough safety briefing covering emergency procedures, life jacket usage, and important dos and don'ts for your journey.",
+    image: "https://images.unsplash.com/photo-1634326080825-985cfc816db6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZldHklMjBicmllZmluZyUyMG1lZXRpbmd8ZW58MXx8fHwxNjMxODY1Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+  }
+];
+
+const customerGuidelines = [
+  {
+    id: 1,
+    category: "Before You Board",
+    icon: PackageCheck,
+    tips: [
+      {
+        title: "Arrive Early",
+        description: "Please arrive 15 minutes before departure time for check-in and safety briefing"
+      },
+      {
+        title: "Dress Comfortably",
+        description: "Wear comfortable, non-slip footwear and bring a light jacket for evening breezes"
+      },
+      {
+        title: "Inform Health Conditions",
+        description: "Let our crew know about any medical conditions, allergies, or pregnancy at check-in"
+      },
+      {
+        title: "Check Weather Updates",
+        description: "We'll contact you if there are any weather-related changes to your booking"
+      }
+    ]
+  },
+  {
+    id: 2,
+    category: "On Board Behavior",
+    icon: Users,
+    tips: [
+      {
+        title: "Stay Seated While Moving",
+        description: "Remain seated when the vessel is in motion, especially during acceleration or turns"
+      },
+      {
+        title: "Hold Railings",
+        description: "Always use handrails when moving around the vessel, especially in rough waters"
+      },
+      {
+        title: "Avoid Edges",
+        description: "Please don't stand at the edge of the vessel or lean over railings, especially with children"
+      },
+      {
+        title: "Follow Crew Instructions",
+        description: "Our crew's instructions are for your safety - please follow them promptly and completely"
+      },
+      {
+        title: "Supervise Children",
+        description: "Children under 12 must be supervised by an adult at all times. Life jackets are mandatory for kids"
+      },
+      {
+        title: "No Diving or Swimming",
+        description: "Swimming is only permitted when the vessel is anchored and with crew supervision"
+      }
+    ]
+  },
+  {
+    id: 3,
+    category: "Dietary Recommendations",
+    icon: Utensils,
+    tips: [
+      {
+        title: "Eat Light Before Boarding",
+        description: "Have a light meal 1-2 hours before departure. Avoid heavy, greasy, or spicy foods"
+      },
+      {
+        title: "Stay Hydrated",
+        description: "Drink plenty of water before and during the trip. Dehydration can worsen seasickness"
+      },
+      {
+        title: "Avoid Strong Odors",
+        description: "Skip strong-smelling foods like fish or garlic before sailing - they can trigger nausea"
+      },
+      {
+        title: "Limit Alcohol",
+        description: "Excessive alcohol consumption affects balance and can increase seasickness. Drink responsibly"
+      },
+      {
+        title: "Ginger Helps",
+        description: "Ginger tea, ginger candy, or ginger tablets can help prevent and reduce seasickness naturally"
+      },
+      {
+        title: "Fresh Air",
+        description: "If feeling queasy, stay on deck in fresh air and focus on the horizon. Avoid staying in enclosed spaces"
+      }
+    ]
+  },
+  {
+    id: 4,
+    category: "What to Bring",
+    icon: PackageCheck,
+    tips: [
+      {
+        title: "Sun Protection",
+        description: "Sunscreen (reef-safe preferred), sunglasses, and a hat - the sun reflects strongly off the water"
+      },
+      {
+        title: "Motion Sickness Remedies",
+        description: "Bring seasickness medication if you're prone to motion sickness (take 30 minutes before departure)"
+      },
+      {
+        title: "Personal Medications",
+        description: "Bring any personal medications you may need during the trip"
+      },
+      {
+        title: "Waterproof Bag",
+        description: "A waterproof pouch or bag for electronics and valuables to protect from water spray"
+      },
+      {
+        title: "Light Jacket",
+        description: "Even on warm days, it can get breezy on the water, especially during sunset cruises"
+      }
+    ]
+  }
+];
+
+const emergencyProtocols = [
+  {
+    id: 1,
+    icon: AlertCircle,
+    title: "Man Overboard",
+    description: "Immediate crew alert, life ring deployment, visual contact maintained, controlled vessel return, Coast Guard coordination"
+  },
+  {
+    id: 2,
+    icon: Activity,
+    title: "Medical Emergency",
+    description: "First aid administration, communication with shore medical support, vessel return or emergency evacuation coordination"
+  },
+  {
+    id: 3,
+    icon: AlertTriangle,
+    title: "Fire Emergency",
+    description: "Fire suppression activation, passenger evacuation to assembly points, Coast Guard notification, life raft deployment if needed"
+  },
+  {
+    id: 4,
+    icon: Phone,
+    title: "24/7 Support",
+    description: "Shore-based emergency operations center, direct Coast Guard line, GPS tracking of all vessels, backup communication systems"
+  }
+];
+
+const certifications = [
+  {
+    id: 1,
+    icon: Shield,
+    title: "Indian Coast Guard",
+    description: "Annual vessel certification and compliance with all Coast Guard safety regulations and maritime laws"
+  },
+  {
+    id: 2,
+    icon: Anchor,
+    title: "Maritime Safety Authority",
+    description: "Licensed and inspected vessels meeting all maritime safety standards with current compliance certificates"
+  },
+  {
+    id: 3,
+    icon: Users,
+    title: "Crew Certifications",
+    description: "All crew members hold valid licenses and certifications from Directorate General of Shipping"
   }
 ];
 
@@ -352,20 +263,20 @@ export function SafetyBlogPage() {
             </div>
             
             <h1 className="mb-6" style={{ letterSpacing: '-0.02em' }}>
-              Safety Blog & Guidelines
+              Your Safety is Our Priority
             </h1>
             
-            <p style={{ fontSize: '18px', color: 'var(--neutral-600)', lineHeight: '1.7', maxWidth: '600px', margin: '0 auto' }}>
-              Comprehensive information about our safety standards, procedures, and commitment to keeping you safe on the water
+            <p style={{ fontSize: '18px', color: 'var(--neutral-600)', lineHeight: '1.7' }}>
+              At Book Sailing Mumbai, we believe that memorable experiences begin with peace of mind. Every precaution, every protocol, and every crew member is dedicated to ensuring your journey on the water is safe, comfortable, and truly unforgettable.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Safety Stats */}
-      <section className="py-16 border-b" style={{ borderColor: 'var(--neutral-200)' }}>
+      {/* Trust Stats */}
+      <section className="py-16 border-b flex items-center justify-center" style={{ borderColor: 'var(--neutral-200)' }}>
         <div className="max-w-[1280px] mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             {experienceStats.map((stat, index) => {
               const Icon = stat.icon;
               return (
@@ -395,23 +306,69 @@ export function SafetyBlogPage() {
         </div>
       </section>
 
-      {/* Safety Features Overview */}
-      <section className="py-16 border-b" style={{ borderColor: 'var(--neutral-200)' }}>
+      {/* Safety Promise */}
+      <section className="py-20" style={{ backgroundColor: 'var(--primary-50)' }}>
         <div className="max-w-[1280px] mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="mb-4">Safety First, Adventure Always</h2>
-            <p className="max-w-2xl mx-auto" style={{ color: 'var(--neutral-600)' }}>
-              Your safety is our top priority. Here are the key safety features on every vessel
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ backgroundColor: 'var(--primary-100)' }}>
+                  <Heart size={18} style={{ color: 'var(--primary-600)' }} />
+                  <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--primary-600)' }}>Our Promise to You</span>
+                </div>
+                
+                <h2 className="mb-6" style={{ letterSpacing: '-0.01em' }}>
+                  We Care About Your Wellbeing
+                </h2>
+                
+                <p style={{ fontSize: '17px', color: 'var(--neutral-700)', lineHeight: '1.8', marginBottom: '16px' }}>
+                  When you step aboard one of our vessels, you're not just a passenger—you're part of our extended family. We understand that you're entrusting us with your safety and your special moments.
+                </p>
+                
+                <p style={{ fontSize: '17px', color: 'var(--neutral-700)', lineHeight: '1.8', marginBottom: '16px' }}>
+                  That's why we go above and beyond industry standards. From our rigorously trained crew to our meticulously maintained vessels, from our comprehensive safety protocols to our 24/7 emergency support, every detail is designed with your wellbeing in mind.
+                </p>
+                
+                <p style={{ fontSize: '17px', color: 'var(--neutral-700)', lineHeight: '1.8' }}>
+                  Safety isn't just a checklist for us—it's a commitment we honor with every journey, every day.
+                </p>
+              </div>
+              
+              <div className="relative rounded-2xl overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1693035647158-3b29740d2cbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMHBhc3NlbmdlcnMlMjBlbmpveWluZ3xlbnwxfHx8fDE3NjMxODY1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Happy passengers enjoying their yacht experience"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Safety Features with Images */}
+      <section className="py-20 border-t" style={{ borderColor: 'var(--neutral-200)' }}>
+        <div className="max-w-[1280px] mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="mb-4">How We Keep You Safe</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--neutral-600)', fontSize: '17px' }}>
+              From state-of-the-art equipment to expert crew training, here's what makes your journey with us secure
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {safetyFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -419,28 +376,40 @@ export function SafetyBlogPage() {
                   key={feature.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 transition-all duration-300 hover:shadow-lg"
+                  className="bg-white rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg"
                   style={{
                     border: '1px solid var(--neutral-200)',
                     boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
                   }}
                 >
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'var(--primary-100)' }}>
-                    <Icon size={24} style={{ color: 'var(--primary-500)' }} />
+                  <div className="relative" style={{ aspectRatio: '16/9' }}>
+                    <ImageWithFallback
+                      src={feature.image}
+                      alt={feature.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h4 className="mb-3">{feature.title}</h4>
-                  <p style={{ fontSize: '15px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
-                    {feature.description}
-                  </p>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--primary-100)' }}>
+                        <Icon size={20} style={{ color: 'var(--primary-500)' }} />
+                      </div>
+                      <h4>{feature.title}</h4>
+                    </div>
+                    <p style={{ fontSize: '15px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
+                      {feature.description}
+                    </p>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
 
           {/* Certification Badge */}
-          <div className="mt-12 text-center">
+          <div className="mt-16 text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -458,81 +427,142 @@ export function SafetyBlogPage() {
         </div>
       </section>
 
-      {/* Articles Grid */}
-      <section className="py-16">
+      {/* Customer Safety Guidelines */}
+      <section className="py-20" style={{ backgroundColor: 'var(--neutral-50)' }}>
         <div className="max-w-[1280px] mx-auto px-4">
-          <div className="grid grid-cols-1 gap-16">
-            {safetyArticles.map((article, index) => (
-              <motion.article
-                key={article.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="border-b pb-16 last:border-b-0"
-                style={{ borderColor: 'var(--neutral-200)' }}
-              >
-                {/* Article Header */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                  <div className="lg:col-span-1">
-                    <div className="aspect-[4/3] relative rounded-xl overflow-hidden" style={{ backgroundColor: 'var(--neutral-100)' }}>
-                      <ImageWithFallback
-                        src={article.image}
-                        alt={article.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="lg:col-span-2">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="px-3 py-1.5 rounded-full" style={{ backgroundColor: 'var(--primary-100)', color: 'var(--primary-700)', fontSize: '13px', fontWeight: 600 }}>
-                        {article.category}
-                      </span>
-                      <span style={{ fontSize: '14px', color: 'var(--neutral-500)' }}>
-                        {article.readTime}
-                      </span>
-                    </div>
-                    
-                    <h2 className="mb-4" style={{ letterSpacing: '-0.01em' }}>
-                      {article.title}
-                    </h2>
-                    
-                    <p style={{ fontSize: '17px', lineHeight: '1.7', color: 'var(--neutral-600)' }}>
-                      {article.content.intro}
-                    </p>
-                  </div>
-                </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="mb-4">Your Safety Guidelines</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--neutral-600)', fontSize: '17px' }}>
+              Simple tips to help you have a safe and comfortable experience on the water
+            </p>
+          </motion.div>
 
-                {/* Article Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {article.content.sections.map((section, sIndex) => (
-                    <div key={sIndex}>
-                      <h4 className="mb-4 flex items-center gap-2">
-                        <CheckCircle size={20} style={{ color: 'var(--primary-500)' }} />
-                        {section.heading}
-                      </h4>
-                      <ul className="space-y-3" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                        {section.points.map((point, pIndex) => (
-                          <li key={pIndex} className="flex items-start gap-2">
-                            <div className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--primary-500)' }} />
-                            <span style={{ fontSize: '14px', color: 'var(--neutral-700)', lineHeight: '1.6' }}>
-                              {point}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {customerGuidelines.map((section, sectionIndex) => {
+              const Icon = section.icon;
+              return (
+                <motion.div
+                  key={section.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+                  className="bg-white rounded-xl p-8"
+                  style={{
+                    border: '1px solid var(--neutral-200)',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+                  }}
+                >
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--primary-100)' }}>
+                      <Icon size={24} style={{ color: 'var(--primary-500)' }} />
                     </div>
-                  ))}
-                </div>
-              </motion.article>
-            ))}
+                    <h3 style={{ fontSize: '22px', fontWeight: 700, color: 'var(--neutral-900)' }}>
+                      {section.category}
+                    </h3>
+                  </div>
+
+                  <div className="space-y-6">
+                    {section.tips.map((tip, tipIndex) => (
+                      <div key={tipIndex} className="flex gap-3">
+                        <div className="mt-1">
+                          <CheckCircle size={20} style={{ color: 'var(--primary-500)' }} />
+                        </div>
+                        <div>
+                          <div style={{ fontSize: '16px', fontWeight: 600, color: 'var(--neutral-900)', marginBottom: '4px' }}>
+                            {tip.title}
+                          </div>
+                          <p style={{ fontSize: '14px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
+                            {tip.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Additional Tips Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-12 bg-white rounded-xl p-8 text-center"
+            style={{
+              border: '2px solid var(--primary-200)',
+              boxShadow: '0 4px 16px rgba(99, 102, 241, 0.1)'
+            }}
+          >
+            <div className="flex justify-center mb-4">
+              <Info size={32} style={{ color: 'var(--primary-500)' }} />
+            </div>
+            <h4 className="mb-3">Have Questions About Safety?</h4>
+            <p style={{ fontSize: '15px', color: 'var(--neutral-600)', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto' }}>
+              Our crew conducts a comprehensive safety briefing before every departure. Feel free to ask any questions—we're here to ensure you feel comfortable and informed throughout your journey.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Emergency Protocols */}
+      <section className="py-20 border-t" style={{ borderColor: 'var(--neutral-200)' }}>
+        <div className="max-w-[1280px] mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="mb-4">Emergency Response</h2>
+            <p className="max-w-2xl mx-auto" style={{ color: 'var(--neutral-600)', fontSize: '17px' }}>
+              While emergencies are rare, we're thoroughly prepared with detailed protocols and trained professionals
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {emergencyProtocols.map((protocol, index) => {
+              const Icon = protocol.icon;
+              return (
+                <motion.div
+                  key={protocol.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-6 text-center"
+                  style={{
+                    border: '1px solid var(--neutral-200)',
+                    boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
+                  }}
+                >
+                  <div className="flex justify-center mb-4">
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--primary-100)' }}>
+                      <Icon size={28} style={{ color: 'var(--primary-500)' }} />
+                    </div>
+                  </div>
+                  <h5 className="mb-3">{protocol.title}</h5>
+                  <p style={{ fontSize: '14px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
+                    {protocol.description}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Certifications Section */}
-      <section className="py-16 border-t" style={{ borderColor: 'var(--neutral-200)', backgroundColor: 'var(--neutral-50)' }}>
+      <section className="py-20" style={{ backgroundColor: 'var(--neutral-50)' }}>
         <div className="max-w-[1280px] mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -548,62 +578,34 @@ export function SafetyBlogPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-xl p-6 text-center"
-              style={{ border: '1px solid var(--neutral-200)' }}
-            >
-              <div className="flex justify-center mb-4">
-                <Shield size={48} style={{ color: 'var(--primary-500)' }} />
-              </div>
-              <h5 className="mb-3">Indian Coast Guard</h5>
-              <p style={{ fontSize: '14px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
-                Annual vessel certification and compliance with all Coast Guard safety regulations
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-xl p-6 text-center"
-              style={{ border: '1px solid var(--neutral-200)' }}
-            >
-              <div className="flex justify-center mb-4">
-                <Anchor size={48} style={{ color: 'var(--primary-500)' }} />
-              </div>
-              <h5 className="mb-3">Maritime Safety Authority</h5>
-              <p style={{ fontSize: '14px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
-                Licensed and inspected vessels meeting all maritime safety standards
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-white rounded-xl p-6 text-center"
-              style={{ border: '1px solid var(--neutral-200)' }}
-            >
-              <div className="flex justify-center mb-4">
-                <Users size={48} style={{ color: 'var(--primary-500)' }} />
-              </div>
-              <h5 className="mb-3">Crew Certifications</h5>
-              <p style={{ fontSize: '14px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
-                All crew members hold valid licenses and certifications from Directorate General of Shipping
-              </p>
-            </motion.div>
+            {certifications.map((cert, index) => {
+              const Icon = cert.icon;
+              return (
+                <motion.div
+                  key={cert.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-6 text-center"
+                  style={{ border: '1px solid var(--neutral-200)' }}
+                >
+                  <div className="flex justify-center mb-4">
+                    <Icon size={48} style={{ color: 'var(--primary-500)' }} />
+                  </div>
+                  <h5 className="mb-3">{cert.title}</h5>
+                  <p style={{ fontSize: '14px', color: 'var(--neutral-600)', lineHeight: '1.6' }}>
+                    {cert.description}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 border-t" style={{ borderColor: 'var(--neutral-200)' }}>
         <div className="max-w-[1280px] mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -612,11 +614,11 @@ export function SafetyBlogPage() {
             transition={{ duration: 0.6 }}
           >
             <h3 className="mb-4" style={{ letterSpacing: '-0.01em' }}>
-              Have Safety Questions?
+              Ready for a Safe and Memorable Experience?
             </h3>
             
             <p className="mb-8 max-w-2xl mx-auto" style={{ fontSize: '17px', color: 'var(--neutral-600)', lineHeight: '1.7' }}>
-              Our safety team is available 24/7 to answer any concerns or questions you may have about our procedures
+              Book your yacht charter with confidence. Our team is available 24/7 to answer any questions about safety, procedures, or your upcoming voyage.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -645,11 +647,13 @@ export function SafetyBlogPage() {
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-600)'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-500)'}
               >
-                Contact Safety Team
+                Book Your Experience
               </motion.a>
 
               <motion.a
-                href="tel:+919136364646"
+                href="https://wa.me/917666689265?text=Hi%2C%20I%20have%20questions%20about%20safety%20procedures"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 rounded-lg w-full sm:w-auto text-center"
@@ -663,7 +667,7 @@ export function SafetyBlogPage() {
                   boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
                 }}
               >
-                Call 24/7 Support
+                Ask Safety Questions
               </motion.a>
             </div>
           </motion.div>
