@@ -53,12 +53,36 @@ export function Footer() {
           <div>
             <h5 className="mb-4" style={{ color: 'white' }}>Services</h5>
             <ul className="space-y-2" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Luxury Yacht Charters</li>
-              <li style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Speed Boat Rentals</li>
-              <li style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Sunset Cruises</li>
-              <li style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Corporate Events</li>
-              <li style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Private Celebrations</li>
-              <li style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>Wedding Proposals</li>
+              <li>
+                <a href="#experiences" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', textDecoration: 'none', cursor: 'pointer' }}>
+                  Luxury Yacht Charters
+                </a>
+              </li>
+              <li>
+                <a href="#experiences" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', textDecoration: 'none', cursor: 'pointer' }}>
+                  Speed Boat Rentals
+                </a>
+              </li>
+              <li>
+                <a href="#experiences" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', textDecoration: 'none', cursor: 'pointer' }}>
+                  Sunset Cruises
+                </a>
+              </li>
+              <li>
+                <a href="#experiences" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', textDecoration: 'none', cursor: 'pointer' }}>
+                  Corporate Events
+                </a>
+              </li>
+              <li>
+                <a href="#experiences" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', textDecoration: 'none', cursor: 'pointer' }}>
+                  Private Celebrations
+                </a>
+              </li>
+              <li>
+                <a href="#experiences" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', textDecoration: 'none', cursor: 'pointer' }}>
+                  Wedding Proposals
+                </a>
+              </li>
             </ul>
           </div>
 
