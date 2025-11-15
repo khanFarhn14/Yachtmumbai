@@ -129,11 +129,11 @@ export function Footer() {
               © 2024 {BRAND_NAME}. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#privacy" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
+              <a href="#privacy-policy" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Privacy Policy
               </a>
-              <a href="#terms" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
-                Terms of Service
+              <a href="#terms-of-use" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
+                Terms of Use
               </a>
               <a href="#safety-blog" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Safety Guidelines

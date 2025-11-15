@@ -675,6 +675,10 @@
     max-width: var(--container-4xl);
   }
 
+  .max-w-\[900px\] {
+    max-width: 900px;
+  }
+
   .max-w-\[1280px\] {
     max-width: 1280px;
   }
@@ -794,6 +798,12 @@
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
+  :where(.space-y-12 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
   }
 
   .overflow-hidden {
