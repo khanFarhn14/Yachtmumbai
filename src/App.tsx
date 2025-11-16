@@ -89,8 +89,8 @@ export default function App() {
       <Navigation />
       <main>
         <Hero />
-        <Fleet />
         <Highlights />
+        <Fleet />
         <Contact />
       </main>
       <Footer />

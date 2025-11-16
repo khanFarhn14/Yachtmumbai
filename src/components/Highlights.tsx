@@ -1,6 +1,8 @@
 import { Calendar, PartyPopper, Tag, Sunrise, Users, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 
 const featuredTrips = [
   {
@@ -48,6 +50,19 @@ const featuredTrips = [
 ];
 
 export function Highlights() {
+  const [selectedTrip, setSelectedTrip] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openDialog = (trip) => {
+    setSelectedTrip(trip);
+    setIsOpen(true);
+  };
+
+  const closeDialog = () => {
+    setSelectedTrip(null);
+    setIsOpen(false);
+  };
+
   return (
     <section id="experiences" className="py-24" style={{ backgroundColor: 'var(--neutral-50)' }}>
       <div className="max-w-[1280px] mx-auto px-4">
@@ -83,6 +98,7 @@ export function Highlights() {
                   y: -8,
                   transition: { duration: 0.3, ease: "easeOut" }
                 }}
+                onClick={() => openDialog(trip)}
                 className="bg-white rounded-3xl overflow-hidden cursor-pointer"
                 style={{
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
@@ -100,11 +116,11 @@ export function Highlights() {
                   <motion.div 
                     className="absolute inset-0"
                     style={{
-                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 70%)'
+                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%)'
                     }}
                   />
                   
-                  {/* Content overlay */}
+                  {/* Content overlay - Only Title and Icon */}
                   <motion.div 
                     className="absolute bottom-0 left-0 right-0 p-6"
                     initial={{ opacity: 0 }}
@@ -112,55 +128,84 @@ export function Highlights() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
                   >
-                    <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center gap-2">
                       <h4 className="m-0" style={{ color: 'white', letterSpacing: '-0.01em' }}>{trip.title}</h4>
                       <Icon size={20} style={{ color: 'var(--primary-400)' }} />
                     </div>
-                    
-                    <p className="mb-4" style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '14px', letterSpacing: '0.01em' }}>
-                      {trip.description}
-                    </p>
-                    
-                    <motion.button
-                      onClick={() => {
-                        const phoneNumber = '917666689265';
-                        const message = encodeURIComponent(`Hi! I'd like to enquire about ${trip.title}.\nPlease share availability, pricing, and package details.`);
-                        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
-                        window.open(whatsappURL, '_blank');
-                      }}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                      transition={{ duration: 0.2 }}
-                      className="px-6 py-2.5 rounded-full"
-                      style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                        backdropFilter: 'blur(10px)',
-                        WebkitBackdropFilter: 'blur(10px)',
-                        border: '1px solid rgba(255, 255, 255, 0.3)',
-                        color: 'white',
-                        fontWeight: 600,
-                        fontSize: '14px',
-                        letterSpacing: '0.02em',
-                        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                        cursor: 'pointer'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.25)';
-                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.4)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
-                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-                      }}
-                    >
-                      Book Now +
-                    </motion.button>
                   </motion.div>
                 </div>
               </motion.div>
             );
           })}
         </div>
+
+        {/* Dialog */}
+        <Dialog open={isOpen} onOpenChange={closeDialog}>
+          <DialogContent className="max-w-2xl">
+            {selectedTrip && (
+              <>
+                <DialogHeader>
+                  <div className="flex items-center gap-3">
+                    {(() => {
+                      const Icon = selectedTrip.icon;
+                      return <Icon size={28} style={{ color: 'var(--primary-500)' }} />;
+                    })()}
+                    <DialogTitle style={{ fontSize: '24px', margin: 0 }}>
+                      {selectedTrip.title}
+                    </DialogTitle>
+                  </div>
+                  <DialogDescription className="sr-only">
+                    {selectedTrip.description}
+                  </DialogDescription>
+                </DialogHeader>
+                
+                <div className="mt-4">
+                  <div className="relative rounded-xl overflow-hidden mb-6" style={{ aspectRatio: '16/9' }}>
+                    <ImageWithFallback
+                      src={selectedTrip.image}
+                      alt={selectedTrip.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  <p style={{ fontSize: '16px', color: 'var(--neutral-600)', lineHeight: '1.7', marginBottom: '24px' }}>
+                    {selectedTrip.description}
+                  </p>
+                  
+                  <motion.button
+                    onClick={() => {
+                      const phoneNumber = '917666689265';
+                      const message = encodeURIComponent(`Hi! I'd like to enquire about ${selectedTrip.title}.\nPlease share availability, pricing, and package details.`);
+                      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+                      window.open(whatsappURL, '_blank');
+                    }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ duration: 0.2 }}
+                    className="w-full px-8 py-4 rounded-lg"
+                    style={{
+                      backgroundColor: 'var(--primary-500)',
+                      color: 'white',
+                      fontWeight: 600,
+                      fontSize: '16px',
+                      border: 'none',
+                      cursor: 'pointer',
+                      boxShadow: '0 4px 12px rgba(99, 102, 241, 0.3)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = 'var(--primary-600)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = 'var(--primary-500)';
+                    }}
+                  >
+                    Book Now via WhatsApp
+                  </motion.button>
+                </div>
+              </>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
