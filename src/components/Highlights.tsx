@@ -1,3 +1,4 @@
+import image_3d6ac3f429b61658b4d3b5a1bdc4bef980e62ea1 from 'figma:asset/3d6ac3f429b61658b4d3b5a1bdc4bef980e62ea1.png';
 import image_a7c2d7e74cbbe797edd68a18e0b6ab8328ba7c46 from 'figma:asset/a7c2d7e74cbbe797edd68a18e0b6ab8328ba7c46.png';
 import speedBoatImage from 'figma:asset/04d5baf095a593d0b3013531a7e8b36807e689fa.png';
 import { Calendar, PartyPopper, Tag, Sunrise, Users, Award } from "lucide-react";
@@ -46,7 +47,7 @@ const featuredTrips = [
     id: 6,
     title: "Anniversary Celebrations",
     description: "Celebrate your love story with a romantic anniversary cruise. Create intimate moments on the serene waters of Mumbai.",
-    image: "https://images.unsplash.com/photo-1675686771689-b86e95c3d67a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGFubml2ZXJzYXJ5JTIwY2VsZWJyYXRpb258ZW58MXx8fHwxNzYzMDU5NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: image_3d6ac3f429b61658b4d3b5a1bdc4bef980e62ea1,
     icon: Sunrise
   }
 ];

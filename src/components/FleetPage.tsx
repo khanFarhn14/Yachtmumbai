@@ -492,35 +492,6 @@ export function FleetPage() {
                             </motion.div>
                           ))}
                         </div>
-
-                        {/* Pricing */}
-                        <div className="mt-8 p-6 rounded-xl" style={{ backgroundColor: 'var(--neutral-50)' }}>
-                          <h5 className="mb-4 flex items-center gap-2">
-                            <Calendar size={18} style={{ color: 'var(--primary-500)' }} />
-                            Pricing Guide
-                          </h5>
-                          
-                          <div className="space-y-3">
-                            <div className="flex justify-between items-center">
-                              <span style={{ fontSize: '13px', color: 'var(--neutral-600)' }}>Hourly</span>
-                              <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--neutral-900)' }}>
-                                {selectedBoat.details.pricing.hourly}
-                              </span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span style={{ fontSize: '13px', color: 'var(--neutral-600)' }}>Half Day (4-5 hrs)</span>
-                              <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--neutral-900)' }}>
-                                {selectedBoat.details.pricing.halfDay}
-                              </span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span style={{ fontSize: '13px', color: 'var(--neutral-600)' }}>Full Day (8-10 hrs)</span>
-                              <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--neutral-900)' }}>
-                                {selectedBoat.details.pricing.fullDay}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
                       </div>
 
                       {/* Features & Amenities */}
