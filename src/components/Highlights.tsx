@@ -1,3 +1,5 @@
+import image_a7c2d7e74cbbe797edd68a18e0b6ab8328ba7c46 from 'figma:asset/a7c2d7e74cbbe797edd68a18e0b6ab8328ba7c46.png';
+import speedBoatImage from 'figma:asset/04d5baf095a593d0b3013531a7e8b36807e689fa.png';
 import { Calendar, PartyPopper, Tag, Sunrise, Users, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
@@ -9,14 +11,14 @@ const featuredTrips = [
     id: 1,
     title: "Sunset Cruise",
     description: "Watch the sun set over the Arabian Sea from our premium yacht. Includes refreshments and music.",
-    image: "https://images.unsplash.com/photo-1642266351423-efa1b7ffe527?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMHN1bnNldCUyMG9jZWFufGVufDF8fHx8MTc2Mjg2MjkyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: image_a7c2d7e74cbbe797edd68a18e0b6ab8328ba7c46,
     icon: Sunrise
   },
   {
     id: 2,
     title: "Speed Boat Adventure",
     description: "Experience the thrill of high-speed boating with our state-of-the-art speed boats.",
-    image: "https://images.unsplash.com/photo-1591115134458-d2ff7636b640?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGVlZCUyMGJvYXQlMjB3YXRlcnxlbnwxfHx8fDE3NjI4NjI5MjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: speedBoatImage,
     icon: Award
   },
   {

@@ -1,3 +1,4 @@
+import image_04d5baf095a593d0b3013531a7e8b36807e689fa from 'figma:asset/04d5baf095a593d0b3013531a7e8b36807e689fa.png';
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
@@ -197,7 +198,7 @@ const fleetData = [
     name: "Speed Boats",
     tagline: "Thrilling Adventure",
     icon: Zap,
-    image: "https://images.unsplash.com/photo-1752082510680-c3e81f8b2d5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcGVlZGJvYXQlMjBtb2Rlcm58ZW58MXx8fHwxNzYzMDYyOTMyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: image_04d5baf095a593d0b3013531a7e8b36807e689fa,
     overview: {
       description: "Feel the adrenaline rush with our high-performance speed boats. Perfect for adventure seekers and quick coastal tours with style and excitement.",
       highlights: [
