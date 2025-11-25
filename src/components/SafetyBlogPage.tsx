@@ -1,6 +1,7 @@
 import { Shield, AlertTriangle, Heart, Users, Anchor, LifeBuoy, CheckCircle, Info, Book, ArrowLeft, Award, Briefcase, Ship, Wind, Sun, Utensils, PackageCheck, AlertCircle, Phone, Clock, Activity } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Link } from "./Router";
 
 const experienceStats = [
   {
@@ -243,18 +244,14 @@ export function SafetyBlogPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <a
-              href="#home"
-              onClick={() => {
-                window.location.hash = '';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+            <Link
+              href="/"
               className="inline-flex items-center gap-2 mb-6 transition-colors duration-200"
               style={{ color: 'var(--primary-500)', textDecoration: 'none', fontWeight: 500 }}
             >
               <ArrowLeft size={20} />
               Back to Home
-            </a>
+            </Link>
 
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--primary-100)' }}>

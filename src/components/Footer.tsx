@@ -1,5 +1,6 @@
-import { Anchor, Facebook, Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import { Anchor, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { BRAND_NAME, BRAND_EMAIL, BRAND_PHONE_PRIMARY } from "../config/brand";
+import { Link } from "./Router";
 
 export function Footer() {
   return (
@@ -22,14 +23,14 @@ export function Footer() {
             <h5 className="mb-4" style={{ color: 'white' }}>Quick Links</h5>
             <ul className="space-y-2" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li>
-                <a href="#home" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
+                <Link href="/" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#fleet" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
+                <Link href="/fleet" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
                   Our Fleet
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#experiences" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
@@ -37,9 +38,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#safety" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
+                <Link href="/safety-blog" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
                   Safety
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#contact" className="transition-colors duration-150 hover:text-[var(--primary-500)]" style={{ color: 'rgba(255, 255, 255, 0.7)', textDecoration: 'none', fontSize: '14px' }}>
@@ -153,15 +154,15 @@ export function Footer() {
               © 2024 {BRAND_NAME}. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#privacy-policy" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
+              <Link href="/privacy-policy" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Privacy Policy
-              </a>
-              <a href="#terms-of-use" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
+              </Link>
+              <Link href="/terms-of-use" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Terms of Use
-              </a>
-              <a href="#safety-blog" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
+              </Link>
+              <Link href="/safety-blog" className="transition-colors duration-150 hover:text-white" style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '14px', textDecoration: 'none' }}>
                 Safety Guidelines
-              </a>
+              </Link>
             </div>
           </div>
         </div>

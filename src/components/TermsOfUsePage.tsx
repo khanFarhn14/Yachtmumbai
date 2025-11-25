@@ -1,6 +1,7 @@
 import { FileText, ArrowLeft, AlertCircle, Calendar, CreditCard, Shield, Users, Anchor, Ban, Scale, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { BRAND_NAME, BRAND_EMAIL, BRAND_PHONE_PRIMARY } from "../config/brand";
+import { Link } from "./Router";
 
 const sections = [
   {
@@ -225,18 +226,14 @@ export function TermsOfUsePage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
-            <a
-              href="#home"
-              onClick={() => {
-                window.location.hash = '';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+            <Link
+              href="/"
               className="inline-flex items-center gap-2 mb-6 transition-colors duration-200"
               style={{ color: 'var(--primary-500)', textDecoration: 'none', fontWeight: 500 }}
             >
               <ArrowLeft size={20} />
               Back to Home
-            </a>
+            </Link>
 
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'var(--primary-100)' }}>

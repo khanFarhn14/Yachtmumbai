@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { BRAND_NAME } from "../config/brand";
+import { Link } from "./Router";
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,27 +12,29 @@ export function Navigation() {
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
           <div className="flex items-center">
-            <h4 className="m-0" style={{ color: 'var(--neutral-900)' }}>
-              {BRAND_NAME}
-            </h4>
+            <Link href="/">
+              <h4 className="m-0 cursor-pointer" style={{ color: 'var(--neutral-900)' }}>
+                {BRAND_NAME}
+              </h4>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#home"
+            <Link
+              href="/"
               className="px-2 py-4 transition-colors duration-150 hover:text-[var(--primary-500)] active:text-[var(--primary-500)]"
               style={{ color: 'var(--neutral-700)', fontWeight: 500 }}
             >
               Home
-            </a>
-            <a
-              href="#fleet"
+            </Link>
+            <Link
+              href="/fleet"
               className="px-2 py-4 transition-colors duration-150 hover:text-[var(--primary-500)]"
               style={{ color: 'var(--neutral-700)', fontWeight: 500 }}
             >
               Our Fleet
-            </a>
+            </Link>
             <a
               href="#experiences"
               className="px-2 py-4 transition-colors duration-150 hover:text-[var(--primary-500)]"
@@ -39,18 +42,13 @@ export function Navigation() {
             >
               Experiences
             </a>
-            <a
-              href="#safety-blog"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.hash = 'safety-blog';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+            <Link
+              href="/safety-blog"
               className="px-2 py-4 transition-colors duration-150 hover:text-[var(--primary-500)]"
               style={{ color: 'var(--neutral-700)', fontWeight: 500 }}
             >
               Safety
-            </a>
+            </Link>
             <a
               href="#contact"
               className="px-6 py-3 rounded-lg transition-colors duration-150"
@@ -84,22 +82,22 @@ export function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col gap-2">
-              <a
-                href="#home"
+              <Link
+                href="/"
                 className="px-2 py-4 transition-colors duration-150"
                 style={{ color: 'var(--neutral-700)', fontWeight: 500 }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </a>
-              <a
-                href="#fleet"
+              </Link>
+              <Link
+                href="/fleet"
                 className="px-2 py-4 transition-colors duration-150"
                 style={{ color: 'var(--neutral-700)', fontWeight: 500 }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Our Fleet
-              </a>
+              </Link>
               <a
                 href="#experiences"
                 className="px-2 py-4 transition-colors duration-150"
@@ -108,19 +106,14 @@ export function Navigation() {
               >
                 Experiences
               </a>
-              <a
-                href="#safety-blog"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.hash = 'safety-blog';
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                  setIsMenuOpen(false);
-                }}
+              <Link
+                href="/safety-blog"
                 className="px-2 py-4 transition-colors duration-150"
                 style={{ color: 'var(--neutral-700)', fontWeight: 500 }}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Safety
-              </a>
+              </Link>
               <a
                 href="#contact"
                 className="px-6 py-3 rounded-lg text-center"

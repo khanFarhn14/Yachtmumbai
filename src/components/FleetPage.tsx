@@ -1,3 +1,4 @@
+import image_209caba74bc25783951bf8ae2f719d50bfa393f9 from 'figma:asset/209caba74bc25783951bf8ae2f719d50bfa393f9.png';
 import image_04d5baf095a593d0b3013531a7e8b36807e689fa from 'figma:asset/04d5baf095a593d0b3013531a7e8b36807e689fa.png';
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -80,7 +81,7 @@ const fleetData = [
     name: "Sail Yachts",
     tagline: "Sophisticated Luxury",
     icon: Ship,
-    image: "https://images.unsplash.com/photo-1622431314984-2680c10607d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5YWNodCUyMGlzb2xhdGVkJTIwY2xlYW58ZW58MXx8fHwxNzYzMDYyOTMxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: image_209caba74bc25783951bf8ae2f719d50bfa393f9,
     overview: {
       description: "Elevate your celebration with our spacious luxury sail yachts. Combining traditional sailing with modern amenities for an unforgettable experience.",
       highlights: [
@@ -348,7 +349,7 @@ export function FleetPage() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="relative"
                 >
-                  <div className="aspect-[4/3] relative rounded-2xl overflow-hidden" style={{ backgroundColor: 'var(--neutral-50)' }}>
+                  <div className="aspect-[3/4] relative rounded-2xl overflow-hidden" style={{ backgroundColor: 'var(--neutral-50)' }}>
                     <ImageWithFallback
                       src={selectedBoat.image}
                       alt={selectedBoat.name}
